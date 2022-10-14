@@ -936,6 +936,60 @@
             order: 11;
         }
         
+        .container[data-v-eea289c8] {
+            display: flex;
+            flex-direction: column
+        }
+        
+        .container img[data-v-eea289c8] {
+            text-align: center
+        }
+        
+        @media screen and (min-width: 994px) {
+            .container[data-v-eea289c8] {
+                margin-left: 20px
+            }
+        }
+        
+        @media screen and (max-width: 993px) {
+            .container[data-v-eea289c8] {
+                align-items: center;
+                text-align: center
+            }
+        }
+        
+        .container[data-v-271187bc] {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 992px;
+            gap: 16px;
+            margin-top: 16px
+        }
+        
+        @media screen and (max-width: 500px) {
+            .container[data-v-271187bc] {
+                grid-template-columns: repeat(1, 1fr)
+            }
+        }
+        
+        .container {
+            min-width: 992px !important;
+            -ms-flex-wrap: nowrap;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
         .order-12 {
             -ms-flex-order: 12;
             order: 12;
@@ -16091,23 +16145,23 @@
             }
         }
         
-        [data-v-eea289c8] {
+        .container[data-v-eea289c8] {
             display: flex;
             flex-direction: column
         }
         
-        img[data-v-eea289c8] {
+        .container img[data-v-eea289c8] {
             text-align: center
         }
         
         @media screen and (min-width: 994px) {
-            [data-v-eea289c8] {
+            .container[data-v-eea289c8] {
                 margin-left: 20px
             }
         }
         
         @media screen and (max-width: 993px) {
-            [data-v-eea289c8] {
+            .container[data-v-eea289c8] {
                 align-items: center;
                 text-align: center
             }
@@ -18137,7 +18191,7 @@
             }
         }
         
-        [data-v-271187bc] {
+        .container[data-v-271187bc] {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             max-width: 992px;
@@ -18146,7 +18200,7 @@
         }
         
         @media screen and (max-width: 500px) {
-            [data-v-271187bc] {
+            .container[data-v-271187bc] {
                 grid-template-columns: repeat(1, 1fr)
             }
         }
@@ -19346,7 +19400,7 @@
     <div id="__nuxt">
         <!---->
         <div id="__layout">
-            <div style="position: relative;">
+            <div style="position: relative; top: -85px;">
                 <div data-v-45caffbe="" class="vue-notification-group notification" style="width: 300px; top: 0px; right: 0px;">
                     <span></span>
                 </div>
@@ -19443,7 +19497,7 @@
                                                 </div>
                                                 <div data-v-271187bc="" class="description">
                                                     <div data-v-271187bc="" class="title">Description</div>
-                                                    <div data-v-271187bc="" class="value" style="text-transform: none;"> This offering of the low-top Air Jordan 1 comes constructed in a full leather build with mesh tongues and lining. It features a White base with Red and Black overlays and branding atop a White midsole
+                                                    <div data-v-271187bc="" class="value" style="text-transform: none; width:380px;"> This offering of the low-top Air Jordan 1 comes constructed in a full leather build with mesh tongues and lining. It features a White base with Red and Black overlays and branding atop a White midsole
                                                         and Red rubber outsole. </div>
                                                 </div>
                                             </div>
@@ -19452,7 +19506,7 @@
                                 </div>
                                 <div class="size-info product-actions" style="height:auto">
                                     <div class="containere hidden-xs">
-                                        <div class="wrape" style="position: relative; left: 300px;">
+                                        <div class="wrape" style="position: relative; left: 300px; width: 400px;">
                                             <a onclick="Buy()" target="_blank">
                                                 <div class="firste">Buy now for 999</div>
                                             </a>
@@ -19518,7 +19572,7 @@
                                                 </div>
                                                 <div data-v-271187bc="" class="description">
                                                     <div data-v-271187bc="" class="title">Description</div>
-                                                    <div data-v-271187bc="" class="value" style="text-transform: none;"> This offering of the low-top Air Jordan 1 comes constructed in a full leather build with mesh tongues and lining. It features a White base with Red and Black overlays and branding atop a White midsole
+                                                    <div data-v-271187bc="" class="value" style="text-transform: none; width:380px;"> This offering of the low-top Air Jordan 1 comes constructed in a full leather build with mesh tongues and lining. It features a White base with Red and Black overlays and branding atop a White midsole
                                                         and Red rubber outsole. </div>
                                                 </div>
                                             </div>
@@ -19741,14 +19795,14 @@
         $.getJSON('https://www.solesearchindia.com/admin-panel/api/product/' + name, function(data) {
             namee = data.product_attributes.name;
             haha = data;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[3]/div[1]/h3").innerHTML = namee;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div/div[3]/div[2]").innerHTML = data.product_attributes.release_year;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div/div[4]/div[2]").innerHTML = data.product_attributes.color;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div/div[5]/div[2]").innerHTML = data.product_attributes.silhouette;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div/div[6]/div[2]").innerHTML = data.product_attributes.nickname;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div/div[7]/div[2]").innerHTML = data.product_attributes.brand_name;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[3]/div[2]/div/div/div[9]/div[2]/text()").innerHTML = data.product_attributes.story_html;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[1]/div[2]/div/div/div[8]/div[2]").innerHTML = data.product_attributes.details;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/h3").innerHTML = namee;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[3]/div[2]").innerHTML = data.product_attributes.release_year;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[4]/div[2]").innerHTML = data.product_attributes.color;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[5]/div[2]").innerHTML = data.product_attributes.silhouette;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[6]/div[2]").innerHTML = data.product_attributes.nickname;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[7]/div[2]").innerHTML = data.product_attributes.brand_name;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[9]/div[2]/text()").innerHTML = data.product_attributes.story_html;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[8]/div[2]").innerHTML = data.product_attributes.details;
             let lowest = haha.product_size_price[Object.keys(haha.product_size_price)[0]].price;
             let highest = 0;
             for (let i = 0; i < Object.keys(haha.product_size_price).length; i++) {
@@ -19760,8 +19814,8 @@
             let priceString = lowest.toLocaleString();
             if (highest != lowest)
                 priceString = lowest.toLocaleString() + ' to ₹' + highest.toLocaleString();
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[4]/button/div[2]").innerHTML = "₹" + priceString;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[3]/div[1]/div[1]/div[2]/div/div/a/div").innerHTML = "Buy through whatsapp for ₹" + priceString;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML = "₹" + priceString;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div/div/a/div").innerHTML = "Buy for ₹" + priceString;
             swiper.appendSlide('<div data-v-1ee2ec34="" class="swiper-slide swiper-slide-active" style="height: auto;"> <div data-v-1ee2ec34="" class="d-flex align-items-center justify-content-center" style="height: 100%;"> <img data-v-1ee2ec34="" src="https://res.cloudinary.com/dx8gt3nnu/image/upload/q_auto,f_auto/dryp-shoe-pictures/' + name + '/display_picture.png" alt="display_picture.png" class="" style="width: 100%; height: 100%; max-height: 500px; max-width: 500px; padding: 50px; object-fit: contain; cursor: zoom-in;"></div></div>');
             for (let i = 0; i < data.product_attributes.image_list.length; i++) {
                 swiper.appendSlide('<div data-v-1ee2ec34="" class="swiper-slide swiper-slide-active" style="height: auto;"> <div data-v-1ee2ec34="" class="d-flex align-items-center justify-content-center" style="height: 100%;"> <img data-v-1ee2ec34="" src="https://res.cloudinary.com/dx8gt3nnu/image/upload/q_auto,f_auto/dryp-shoe-pictures/' + name + '/' + (i + 1) + '.png" alt="display_picture.png" class="" style="width: 100%; height: 100%; max-height: 500px; max-width: 500px; padding: 50px; object-fit: contain; cursor: zoom-in;"></div></div>');
