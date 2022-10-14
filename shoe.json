@@ -1,0 +1,29 @@
+{
+    "$ref": "basic_shoe.json",
+    "properties": {
+        "shoes": {
+            "type": "array",
+            "format": "table",
+            "title": "Shoes",
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "link": {
+                        "type": "string"
+                    },
+                    "priceSize": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "title": "size"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8" />
-    
     <title>Admin Panel</title>
 
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
@@ -12,7 +11,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
 
-    
     <script>
         // Set the default CSS theme and icon library globally
         JSONEditor.defaults.theme = 'spectre';
@@ -29,32 +27,17 @@
 <body>
     <div class='container'>
         <div class='columns'>
-            <h1 class='col-md-12'>CSS Integration JSON Editor Example</h1>
+            <h1 class='col-md-12'>Hehe</h1>
         </div>
         <div class='columns'>
             <div class='column col-md-6'>
-                <p>JSON Editor supports these popular CSS frameworks:</p>
-                <ul>
-                    <li>bootstrap 4</li>
-                    <li>spectre.css (shown here)</li>
-                    <li>tailwind</li>
-                </ul>
-            </div>
-            <div class='column col-md-6'>
-                <p>JSON Editor supports these popular icon libraries:</p>
-                <ul>
-                    <li>jQueryUI</li>
-                    <li>Font Awesome 3</li>
-                    <li>Font Awesome 4</li>
-                    <li>Font Awesome 5</li>
-                    <li>spectre.css (shown here)</li>
-                </ul>
+                <p>Add Shoes here</p>
             </div>
         </div>
         <div class='columns'>
             <div class='column col-md-12'>
-                <button id='submit' class='tiny'>Submit (console.log)</button>
-                <button id='restore' class='secondary tiny'>Restore to Default</button>
+                <input type="text" id="Token" name="token"><br><br>
+                <button id='submit' onclick="publish()" class="btn btn-sm btn-primary">Publish</button>
                 <span id='valid_indicator' class='label'></span>
             </div>
         </div>
@@ -62,30 +45,11 @@
             <div class='column col-md-12' id='editor_holder'></div>
         </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         // This is the starting value for the editor
         // We will use this to seed the initial editor 
         // and to provide a "Restore to Default" button.
-        var starting_value = {
-            name: "John Smith",
-            age: 35,
-            gender: "male",
-            location: {
-                city: "San Francisco",
-                state: "California"
-            },
-            pets: [{
-                name: "Spot",
-                type: "dog",
-                fixed: true
-            }, {
-                name: "Whiskers",
-                type: "cat",
-                fixed: false
-            }]
-        };
-
         // Initialize the editor
         var editor = new JSONEditor(document.getElementById('editor_holder'), {
             // Enable fetching schemas via ajax
@@ -93,27 +57,19 @@
 
             // The schema for the editor
             schema: {
-                $ref: "person.json",
+                $ref: "shoe.json",
                 format: "grid"
             },
 
             // Seed the form with a starting value
-            startval: starting_value
+
+        });
+        editor.on('ready', function() {
+            $.getJSON("./shoes.json", function(data) {
+                editor.setValue(data);
+            });
         });
 
-        // Hook up the submit button to log to the console
-        document.getElementById('submit').addEventListener('click', function() {
-            // Get the value from the editor
-            console.log(editor.getValue());
-        });
-
-        // Hook up the Restore to Default button
-        document.getElementById('restore').addEventListener('click', function() {
-            editor.setValue(starting_value);
-        });
-
-        // Hook up the validation indicator to update its 
-        // status whenever the editor changes
         editor.on('change', function() {
             // Get an array of errors from the validator
             var errors = editor.validate();
@@ -131,6 +87,47 @@
                 indicator.textContent = 'valid';
             }
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function publish() {
+            console.log(editor.getValue());
+            //https://api.github.com/repos/drakedrac/solegasm/contents/
+            let token = document.getElementById("Token").value;
+            var content = btoa(JSON.stringify(editor.getValue()));
+            console.log(content);
+            $.getJSON("https://api.github.com/repos/drakedrac/solegasm/contents/shoes.json", function(data) {
+                uploadFileApi(token, content, data.sha)
+            });
+
+            function uploadFileApi(token, content, sha) {
+
+                var data = JSON.stringify({
+                    "message": "json file",
+                    "content": `${content}`,
+                    "sha": `${sha}`
+                });
+
+                var config = {
+                    method: 'put',
+                    url: 'https://api.github.com/repos/drakedrac/solegasm/contents/shoes.json',
+
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    data: data
+                };
+
+                axios(config)
+                    .then(function(response) {
+                        console.log(JSON.stringify(response.data));
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
+            }
+        }
     </script>
 </body>
 
