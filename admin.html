@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Admin Panel</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="./dropdown.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
-
+    <script src="./js/jsoneditor.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         // Set the default CSS theme and icon library globally
         JSONEditor.defaults.theme = 'spectre';
@@ -33,10 +34,23 @@
             <div class='column col-md-6'>
                 <p>Add Shoes here</p>
             </div>
+            <div class="px-app px-dropdown" style=" z-index:999;">
+                <h2>Select brand</h2>
+                <input class="px-dropdown-value" type="hidden" value="value1">
+                <div class="px-dropdown-input">
+                    <input type="text" readonly="" value="Jordans">
+                    <i class="bx bx-chevron-down"></i>
+                </div>
+                <div class="px-dropdown-panel">
+                    <p data-value="value1">Jordans</p>
+                    <p data-value="value2">Nike</p>
+                    <p data-value="value3">Adidas</p>
+                </div>
+            </div>
         </div>
         <div class='columns'>
             <div class='column col-md-12'>
-                <input type="text" id="Token" name="token"><br><br>
+                <input type="text" id="Token" placeholder="place token here..."><br><br>
                 <button id='submit' onclick="publish()" class="btn btn-sm btn-primary">Publish</button>
                 <span id='valid_indicator' class='label'></span>
             </div>
@@ -47,22 +61,12 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        // This is the starting value for the editor
-        // We will use this to seed the initial editor 
-        // and to provide a "Restore to Default" button.
-        // Initialize the editor
         var editor = new JSONEditor(document.getElementById('editor_holder'), {
-            // Enable fetching schemas via ajax
             ajax: true,
-
-            // The schema for the editor
             schema: {
                 $ref: "shoe.json",
                 format: "grid"
             },
-
-            // Seed the form with a starting value
-
         });
         editor.on('ready', function() {
             $.getJSON("./shoes.json", function(data) {
@@ -71,18 +75,13 @@
         });
 
         editor.on('change', function() {
-            // Get an array of errors from the validator
             var errors = editor.validate();
 
             var indicator = document.getElementById('valid_indicator');
-
-            // Not valid
             if (errors.length) {
                 indicator.className = 'label alert';
                 indicator.textContent = 'not valid';
-            }
-            // Valid
-            else {
+            } else {
                 indicator.className = 'label success';
                 indicator.textContent = 'valid';
             }
@@ -92,13 +91,12 @@
     <script>
         function publish() {
             console.log(editor.getValue());
-            //https://api.github.com/repos/drakedrac/solegasm/contents/
             let token = document.getElementById("Token").value;
             var content = btoa(JSON.stringify(editor.getValue()));
             console.log(content);
-            $.getJSON("https://api.github.com/repos/drakedrac/solegasm/contents/shoes.json", function(data) {
-                uploadFileApi(token, content, data.sha)
-            });
+            //$.getJSON("https://api.github.com/repos/drakedrac/solegasm/contents/shoes.json", function(data) {
+            //    uploadFileApi(token, content, data.sha)
+            //});
 
             function uploadFileApi(token, content, sha) {
 
@@ -122,12 +120,39 @@
                 axios(config)
                     .then(function(response) {
                         console.log(JSON.stringify(response.data));
+                        document.getElementById("valid_indicator").innerHTML = "Success";
                     })
                     .catch(function(error) {
                         console.log(error);
+                        document.getElementById("valid_indicator").innerHTML = error;
                     });
             }
         }
+        const initpXDropdown = () => {
+            const dropdownList = document.querySelectorAll(".px-dropdown");
+            window.addEventListener("click", () => {
+                dropdownList.forEach((item) => {
+                    item.classList.remove("active");
+                });
+            });
+            dropdownList.forEach((item) => {
+                const dropdownValue = item.querySelector(".px-dropdown-value");
+                const dropdownInput = item.querySelector(".px-dropdown-input");
+                const dropdownPanelOptions = item.querySelectorAll(".px-dropdown-panel p");
+                dropdownInput.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    item.classList.toggle("active");
+                });
+                dropdownPanelOptions.forEach((item) => {
+                    item.addEventListener("click", (event) => {
+                        dropdownInput.querySelector("input").value = event.target.innerHTML;
+                        dropdownValue.value = event.target.getAttribute("data-value");
+                    });
+                });
+            });
+        };
+
+        initpXDropdown();
     </script>
 </body>
 

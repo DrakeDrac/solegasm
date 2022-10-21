@@ -232,7 +232,7 @@
             <div class="navbar navbar-default navbar-static-top" style="background: #000000;  position: fixed; top: 0px; width: 100%;">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
+                        <a class="navbar-brand" href="./"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none;">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -262,7 +262,7 @@
         <div data-v-eea289c8="" class="swiper mySwiperr" style="position:relative; top:60px;">
             <div data-v-eea289c8="" class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                 <div data-v-eea289c8="" class="swiper-slide" style="width: 404px; height: 310px; margin-right: 30px;">
-                    <a href="./product.html?p=air-jordan-1-low-%27bred-toe%27-553558612" style="width: auto;">
+                    <a style="width: auto;">
                         <div role="listitem" class="carousel-item active" aria-current="true" aria-posinset="3" aria-setsize="7" id="__BVID__30" aria-hidden="false">
                             <picture>
                                 <source media="(max-width: 100px)" srcset="./index_files/hehe.jpg">
@@ -412,9 +412,6 @@
                               </button>
                         </div>
                     </div>
-                    <div data-v-214c9770="" class="product-carousel-title" style="text-align: center; margin: 10px;">
-                        #SSFAM
-                    </div>
             </section>
             <!---->
             </div>
@@ -455,7 +452,7 @@
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="js/jquery.js"></script>
-        <!-- Initialize Swiper -->
+
         <script>
             var sliderr = new Swiper(".mySwiperr", {
                 slidesPerView: 1,
@@ -502,23 +499,24 @@
                     prevEl: ".swiper-button-prev"
                 }
             });
-            $.getJSON('https://www.solesearchindia.com/admin-panel/api/product/trending', function(data) {
-                for (let i = 0; i < data.sneakers.length; i++) {
-                    let datas = data.sneakers[i];
-                    let name = datas[0] + "";
-                    swiper[0].appendSlide('<div data-v-eea289c8="" class="swiper-slide" style="width: 310px; height: 310px; margin-right: 30px;"> <div data-v-eea289c8="" class="container"><div data-v-eea289c8="" class="cursor"><img data-v-eea289c8="" src="' + "https://res.cloudinary.com/dx8gt3nnu/image/upload/c_limit,dpr_1,h_150,q_auto,w_150,f_webp/dryp-shoe-pictures/" + datas[0] + "/display_picture.png " + '" alt="' + datas[1] + '" width="200" height="200" class="" onclick=window.open("./product.html?p=' + name + '","_self")></div><div data-v-eea289c8="" class="product-name">' + datas[1] + '</div><div data-v-eea289c8="" class="lowest-ask">Price</div><p data-v-eea289c8="" class="product-price">₹' + datas[2].toLocaleString() + '</p></div></div>');
+            $.getJSON('https://solegasm.in/AllShoes.json', function(data) {
+                for (let i = 0; i < 16; i++) {
+                    $.getJSON('https://solegasm.in/shoes/'+data[i]+".json", function(shoe) {
+                        let x=shoe.thumbnail.split("fill");
+                    swiper[0].appendSlide('<div data-v-eea289c8="" class="swiper-slide" style="width: 310px; height: 310px; margin-right: 30px;"> <div data-v-eea289c8="" class="container"><div data-v-eea289c8="" class="cursor"><img data-v-eea289c8="" src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" width="200" height="200" class="" onclick=window.open("./product?p=' + shoe.link + '","_self")></div><div data-v-eea289c8="" class="product-name">' + shoe.name + '</div><div data-v-eea289c8="" class="lowest-ask">Price</div><p data-v-eea289c8="" class="product-price">₹' + shoe.price + '</p></div></div>');
+                    });
                 }
-            });
-            $.getJSON('https://www.solesearchindia.com/admin-panel/api/product/recently-sold', function(data) {
-                for (let i = 0; i < data.products.length; i++) {
-                    let datas = data.products[i];
-                    let name = datas[0] + "";
-                    swiper[1].appendSlide('<div data-v-eea289c8="" class="swiper-slide" style="width: 310px; height: 310px; margin-right: 30px;"> <div data-v-eea289c8="" class="container"><div data-v-eea289c8="" class="cursor"><img data-v-eea289c8="" src="' + "https://res.cloudinary.com/dx8gt3nnu/image/upload/c_limit,dpr_1,h_150,q_auto,w_150,f_webp/dryp-shoe-pictures/" + datas[0] + "/display_picture.png " + '" alt="' + datas[1] + '" width="200" height="200" class="" onclick=window.open("./product.html?p=' + name + '","_self")></div><div data-v-eea289c8="" class="product-name">' + datas[1] + '</div><div data-v-eea289c8="" class="lowest-ask">Price</div><p data-v-eea289c8="" class="product-price">₹' + datas[2].toLocaleString() + '</p></div></div>');
+                for (let i = 15; i < 31; i++) {
+                    $.getJSON('https://solegasm.in/shoes/'+data[i]+".json", function(shoe) {
+                        let x=shoe.thumbnail.split("fill");
+                    swiper[1].appendSlide('<div data-v-eea289c8="" class="swiper-slide" style="width: 310px; height: 310px; margin-right: 30px;"> <div data-v-eea289c8="" class="container"><div data-v-eea289c8="" class="cursor"><img data-v-eea289c8="" src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" width="200" height="200" class="" onclick=window.open("./product?p=' + shoe.link + '","_self")></div><div data-v-eea289c8="" class="product-name">' + shoe.name + '</div><div data-v-eea289c8="" class="lowest-ask">Price</div><p data-v-eea289c8="" class="product-price">₹' + shoe.price + '</p></div></div>');
+                    });
                 }
                 var loader = document.getElementsByClassName('loader');
                 for (let i = 0; i < loader.length; i++)
                     loader[i].remove();
             });
+
             ActiveBrand(0);
 
             function getElementByXpath(path) {
@@ -541,7 +539,7 @@
                 $.getJSON('https://www.solesearchindia.com/admin-panel/api/related-products/' + elem.children[1].textContent, function(data) {
                     for (let i = 0; i < 6; i++) {
                         let name = data.products.hits.hits[i]._source.slug;
-                        parentt.innerHTML += '<div data-v-4849fd70=""><div data-v-4849fd70="" class="d-flex flex-column align-items-center mt-5 cursor"><img data-v-4849fd70="" onclick=window.open("./product.html?p=' + name + '","_self") src="' + 'https://res.cloudinary.com/dx8gt3nnu/image/upload/q_auto,f_auto/dryp-shoe-pictures/' + name + '/display_picture.png' + '" width="150" height="150" class="product-img"><div data-v-4849fd70="" class="product-name mt-2">' + data.products.hits.hits[i]._source.name + '</div></div></div>'
+                        parentt.innerHTML += '<div data-v-4849fd70=""><div data-v-4849fd70="" class="d-flex flex-column align-items-center mt-5 cursor"><img data-v-4849fd70="" onclick=window.open("./product?p=' + name + '","_self") src="' + 'https://res.cloudinary.com/dx8gt3nnu/image/upload/q_auto,f_auto/dryp-shoe-pictures/' + name + '/display_picture.png' + '" width="150" height="150" class="product-img"><div data-v-4849fd70="" class="product-name mt-2">' + data.products.hits.hits[i]._source.name + '</div></div></div>'
                     }
                 });
             }

@@ -600,53 +600,6 @@
             overflow-y: scroll;
         }
         
-        ,
-        -fluid,
-        -sm,
-        -md,
-        -lg,
-        -xl {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-        
-        @media (min-width: 576px) {
-            ,
-            -sm {
-                max-width: 540px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            ,
-            -sm,
-            -md {
-                max-width: 720px;
-            }
-        }
-        
-        @media (min-width: 992px) {
-            ,
-            -sm,
-            -md,
-            -lg {
-                max-width: 960px;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            ,
-            -sm,
-            -md,
-            -lg,
-            -xl {
-                max-width: 1140px;
-            }
-        }
-        
         .row {
             display: -ms-flexbox;
             display: flex;
@@ -945,18 +898,14 @@
             text-align: center
         }
         
-        @media screen and (min-width: 994px) {
             .container[data-v-eea289c8] {
                 margin-left: 20px
             }
-        }
         
-        @media screen and (max-width: 993px) {
             .container[data-v-eea289c8] {
                 align-items: center;
                 text-align: center
             }
-        }
         
         .container[data-v-271187bc] {
             display: grid;
@@ -4633,35 +4582,6 @@
         
         .tab-content>.active {
             display: block;
-        }
-        
-        {
-            position: relative;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            padding: 0.5rem 1rem;
-        }
-        
-        ,
-        -fluid,
-        -sm,
-        -md,
-        -lg,
-        -xl {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
         }
         
         -brand {
@@ -10701,12 +10621,6 @@
             body {
                 min-width: 992px !important;
             }
-            {
-                min-width: 992px !important;
-            }
-            {
-                display: none;
-            }
             .badge {
                 border: 1px solid #000;
             }
@@ -10735,11 +10649,6 @@
                 border-color: #dee2e6;
             }
         }
-        
-        @charset "UTF-8";
-        /*!
-         * BootstrapVue Custom CSS (https://bootstrap-vue.org)
-         */
         
         .bv-no-focus-ring:focus {
             outline: none;
@@ -14552,8 +14461,7 @@
         }
         
         .swiper-zoom-container>img,
-        .swiper-zoom-container>svg,
-        .swiper-zoom-container>canvas {
+        .swiper-zoom-container>svg {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
@@ -18199,11 +18107,9 @@
             margin-top: 16px
         }
         
-        @media screen and (max-width: 500px) {
             .container[data-v-271187bc] {
                 grid-template-columns: repeat(1, 1fr)
             }
-        }
         
         .header[data-v-271187bc] {
             font-size: 18px;
@@ -18554,7 +18460,6 @@
         .img-container {
             width: 56%;
             padding: 1rem;
-            background: #fff
         }
         
         .img-container .display-img {
@@ -18585,6 +18490,12 @@
         @media screen and (max-width: 992px) {
             .img-container {
                 width: 100%
+            }
+        }
+        @media screen and (min-width: 1002px) {
+            .img-container {
+                position: relative; 
+                top:100px
             }
         }
         
@@ -18703,11 +18614,9 @@
             }
         }
         
-        @media screen and (max-width: 425px) {
             .productdetail__main .productinfo .img-info-flex .img-info__text {
                 width: 60%
             }
-        }
         
         .productdetail__main .productinfo .img-info__img {
             height: 50rem;
@@ -19368,17 +19277,7 @@
             padding-top: 1.7rem
         }
         
-        @media screen and (max-width: 992px) {
-            .productdetail .img-info__text {
-                display: none
-            }
-        }
         
-        @media screen and (max-width: 425px) {
-            .productdetail .img-info__text .story--html {
-                display: none
-            }
-        }
         
         .productdetail .img-info__text-small--screen {
             display: none
@@ -19393,7 +19292,108 @@
         .productdetail b {
             cursor: pointer
         }
+        html, body {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
     </style>
+     <style>
+        .canvas1-block {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+    height: auto;
+    bottom:80px;
+    right: -70px;
+}
+@media(max-width: 768px){
+.canvas1-block {
+    right: 300px;
+    bottom:0px;
+}
+}
+.canvas {
+  /*border: 1px solid red;*/
+  width: 360px;
+    height: auto;
+}
+.canvas1 {
+  max-width: 100%;
+  cursor: grab;
+  width: 360px;
+    height: auto;
+}
+input[type=text]{
+    width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+  
+  input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+@media screen and (min-width: 994px) {
+            .container[data-v-eea289c8] {
+                margin-left: 20px
+            }
+        }
+        
+        @media screen and (max-width: 993px) {
+            .container[data-v-eea289c8] {
+                align-items: center;
+                text-align: center
+            }
+        }
+        
+    </style>
+    <script src='https://unpkg.com/@its2easy/animate-images'></script>
+    <script>
+        function LoadPics(ok){
+        $.ajax({
+    url:`https://res.cloudinary.com/dmbkv8jp3/image/upload/v1666005597/${ok}/img1.webp`,
+    type:'HEAD',
+    error: function()
+    {
+        console.log("Hehe");
+        let element = document.getElementById("canvas1");
+        element.outerHTML=`<img src=${pic} width="100%">`;
+    },
+    success: function()
+    {     
+        let element = document.getElementById("canvas1");
+        let imagesArray = Array.from(new Array(36), (v, k) => {
+          return `https://res.cloudinary.com/dmbkv8jp3/image/upload/v1666005597/${ok}/img${k+1}.webp`;
+        });
+      
+        let instance1 = new AnimateImages(element, {
+          images: imagesArray,
+          preload: "partial",
+          preloadNumber: 5,
+          poster: imagesArray[0],
+          fps: 15,
+          loop: true,
+          reverse: false,
+          inversion: true,
+          autoplay: true,
+          fillMode: "cover",
+          draggable: true,
+          dragModifier: 1.5,
+          touchScrollMode: "allowPageScroll"
+        });
+        instance1.preloadImages();
+        instance1.playFrames(36);   
+    }
+});
+        }
+    </script>  
 </head>
 
 <body>
@@ -19407,31 +19407,31 @@
                 <div data-v-5e960a0e="">
                     <header>
                         <div class="navbar navbar-default navbar-static-top" style="background: #000000;  position: fixed; top: 0px; width: 100%;">
-                            <div class="container">
+                            <div class="containere">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
+                                    <a class="navbar-brand" href="./"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none;">
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
                                     <a data-v-4b7cb19b="" data-toggle="collapse" data-target=".navbar-scollapse" target="_self" class="navbar-search">
                                         <svg data-v-4b7cb19b="" viewBox="0 0 16 16" width="2em" height="2em" focusable="false" role="img" aria-label="search" xmlns="http://www.w3.org/2000/svg" fill="white" class="bi-search b-icon bi">
-                                     <g data-v-4b7cb19b="">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                                     </g>
-                                  </svg>
+                                             <g data-v-4b7cb19b="">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                             </g>
+                                          </svg>
                                     </a>
                                 </div>
                                 <div class="navbar-collapse collapse" aria-expanded="false">
                                     <ul class="nav navbar-nav">
                                         <li><a href="./">Home</a></li>
-                                        <li><a href="products">All Products</a></li>
-                                        <li><a href="contact">Contact</a></li>
+                                        <li><a href="./products">All Products</a></li>
+                                        <li><a href="./contact">Contact</a></li>
                                     </ul>
                                 </div>
                                 <div class="navbar-scollapse collapse" aria-expanded="false">
-                                    <input type="text" placeholder="Search for shoes here" class="search" onchange="Search(this.value)" style="width: 360px; height: 35px;"></input>
+                                    <input type="text" placeholder="Search for shoes here" class="search" onchange="Search(this.value)" style="width: 360px; height: 35px; position:absolute; left:25px;">
                                 </div>
                             </div>
                         </div>
@@ -19445,98 +19445,40 @@
                             <div class="b-overlay-wrap position-relative">
                                 <div class="productinfo">
                                     <div class="img-container">
-                                        <div data-v-1ee2ec34="">
-                                            <div data-v-1ee2ec34="" class="swiper mySwiper">
-                                                <div data-v-1ee2ec34="" class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-
-                                                </div>
-                                                <div data-v-1ee2ec34="" id="product-images-pagination" class="swiper-pagination swiper-pagination-bullets swiper-pagination-clickable">
-                                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span>
-                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label=""></span>
-                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label=""></span>
-                                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label=""></span>
-                                                </div>
-                                                <button data-v-1ee2ec34="" slot="button-prev" id="product-images-prev" class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-disabled="true"></button>
-                                                <button data-v-1ee2ec34="" slot="button-next" id="product-images-next" class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"></button>
-                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                        <div class="container pt-4 pb-5">
+                                            <div class="canvas1-block">
+                                              <canvas id="canvas1" class="canvas canvas1" width="200" height="150"></canvas>
                                             </div>
-                                            <!---->
-                                        </div>
-                                    </div>
-                                    <div class="img-info__text">
-                                        <div data-v-271187bc="" class="specifications">
-                                            <p data-v-271187bc="" class="header">SPECIFICATIONS</p>
-                                            <div data-v-271187bc="" class="container">
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">Authentic</div>
-                                                    <div data-v-271187bc="" class="value">100% CERTIFIED</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">condition</div>
-                                                    <div data-v-271187bc="" class="value">brand new</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">color</div>
-                                                    <div data-v-271187bc="" class="value">Red</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">silhouette</div>
-                                                    <div data-v-271187bc="" class="value">Air Jordan 1 Low</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">nickname</div>
-                                                    <div data-v-271187bc="" class="value">Air Jordan 1 Low 'Reverse Black Toe'</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">brand</div>
-                                                    <div data-v-271187bc="" class="value">Air Jordan</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">details</div>
-                                                    <div data-v-271187bc="" class="value"></div>
-                                                </div>
-                                                <div data-v-271187bc="" class="description">
-                                                    <div data-v-271187bc="" class="title">Description</div>
-                                                    <div data-v-271187bc="" class="value" style="text-transform: none; width:380px;"> This offering of the low-top Air Jordan 1 comes constructed in a full leather build with mesh tongues and lining. It features a White base with Red and Black overlays and branding atop a White midsole
-                                                        and Red rubber outsole. </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="size-info product-actions" style="height:auto">
-                                    <div class="containere hidden-xs">
-                                        <div class="wrape" style="position: relative; left: 300px; width: 400px;">
-                                            <a onclick="Buy()" target="_blank">
-                                                <div class="firste">Buy now for 999</div>
-                                            </a>
-                                        </div>
+                                      </div>
                                     </div>
                                 </div>
                                 <div class="size-info__different-sizes">
                                     <div class="d-flex flex-column" style="gap: 16px;">
-                                        <h3> Air Jordan 1 Low 'Reverse Black Toe' </h3>
+                                        <h3 style="  display: block; margin-left: auto; margin-right: auto; font-weight: bold;">Jordan 4 Retro Canyon Purple (W)</h3>
 
                                         <div data-v-6237a232="" style="margin-top: 16px;">
                                             <div data-v-6237a232="" class="size-selector">
-                                                <div data-v-6237a232="">Size:</div>
-                                                <div data-v-6237a232="" style="font-weight: bold;"> 7 <svg data-v-6237a232="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="arrow down" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-arrow-down b-icon bi">
-                                 <g data-v-6237a232="">
-                                   <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"></path>
-                                 </g>
-                               </svg>
-                                                </div>
+                                                <div data-v-6237a232="">Sizes Available:</div>
+                                                <div data-v-6237a232="" style="font-weight: bold;"> UK 7 - 11 </div>
 
                                             </div>
 
                                             <!---->
                                         </div>
-
+                                        <div class="size-info product-actions" style="height:auto">
+                                            <div class="containere hidden-xs">
+                                                <div class="wrape" style="width: 400px;  margin-left: auto; margin-right: auto;">
+                                                    <a onclick="Buy()" target="_blank">
+                                                        <div id="pcPrice" style="width: 400px;  margin-left: auto; margin-right: auto;" class="firste">Buy now for 999</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!---->
                                     </div>
-                                    <div class="img-info__text img-info__text-small--screen">
+                                    <div class="img-info__text">
                                         <div data-v-271187bc="" class="specifications">
-                                            <p data-v-271187bc="" class="header">SPECIFICATIONS</p>
+                                            <p class="header" style=" margin: auto; width: 50%;" data-v-271187bc="">SPECIFICATIONS</p>
                                             <div data-v-271187bc="" class="container">
                                                 <div data-v-271187bc="">
                                                     <div data-v-271187bc="" class="title">Authentic</div>
@@ -19547,28 +19489,12 @@
                                                     <div data-v-271187bc="" class="value">Sneakers</div>
                                                 </div>
                                                 <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">release year</div>
-                                                    <div data-v-271187bc="" class="value">2022</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">color</div>
-                                                    <div data-v-271187bc="" class="value">Red</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">silhouette</div>
+                                                    <div data-v-271187bc="" class="title">make</div>
                                                     <div data-v-271187bc="" class="value">Air Jordan 1 Low</div>
                                                 </div>
                                                 <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">nickname</div>
+                                                    <div data-v-271187bc="" class="title">SKU</div>
                                                     <div data-v-271187bc="" class="value">Air Jordan 1 Low 'Reverse Black Toe'</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">brand</div>
-                                                    <div data-v-271187bc="" class="value">Air Jordan</div>
-                                                </div>
-                                                <div data-v-271187bc="">
-                                                    <div data-v-271187bc="" class="title">details</div>
-                                                    <div data-v-271187bc="" class="value"></div>
                                                 </div>
                                                 <div data-v-271187bc="" class="description">
                                                     <div data-v-271187bc="" class="title">Description</div>
@@ -19580,6 +19506,7 @@
                                     </div>
                                 </div>
                                 <!---->
+                                
                             </div>
                             <div class="also_dig">
                                 <h5>You may also like these</h5>
@@ -19591,7 +19518,7 @@
                                             </div>
                                             <div data-v-2f1ee77c="" class="w-75">
                                                 <div data-v-2f1ee77c="" class="product-name">
-                                                    <a data-v-2f1ee77c="" href="./product.html?p=wmns-air-jordan-1-low-&#39;black-university-blue&#39;-dc0774041">Wmns Air Jordan 1 Low 'Black University Blue'</a>
+                                                    <a data-v-2f1ee77c="" href="./product?p=wmns-air-jordan-1-low-&#39;black-university-blue&#39;-dc0774041">Wmns Air Jordan 1 Low 'Black University Blue'</a>
                                                 </div>
                                                 <div data-v-2f1ee77c="" class="lowest-ask"> Price: </div>
                                                 <div data-v-2f1ee77c="" class="product-price"> ₹17,000 </div>
@@ -19719,7 +19646,7 @@
                             <!---->
                             <div class="b-sidebar-backdrop bg-dark" style="display: none;"></div>
                         </div>
-                        <div class="bottom-buttons">
+                        <div class="bottom-buttons" style="position: fixed; bottom: 0; width: 100%;">
                             <button class="bot-buttons buy" onclick=Buy()>
                  <div>BUY THROUGH WHATSAPP</div>
                  <div class="price">₹&nbsp;14500</div>
@@ -19764,70 +19691,74 @@
             </div>
         </div>
     </div>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            autoHeight: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            }
-        });
+
         let params = (new URL(document.location)).searchParams;
         let name = params.get("p");
-        let namee = "";
-        let size = "9";
-        var haha;
+        let namee="";
+        let pic="";
+        let price="";
 
         function getElementByXpath(path) {
             return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
         }
-        $.getJSON('https://www.solesearchindia.com/admin-panel/api/product/' + name, function(data) {
-            namee = data.product_attributes.name;
-            haha = data;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/h3").innerHTML = namee;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[3]/div[2]").innerHTML = data.product_attributes.release_year;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[4]/div[2]").innerHTML = data.product_attributes.color;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[5]/div[2]").innerHTML = data.product_attributes.silhouette;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[6]/div[2]").innerHTML = data.product_attributes.nickname;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[7]/div[2]").innerHTML = data.product_attributes.brand_name;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[9]/div[2]/text()").innerHTML = data.product_attributes.story_html;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div/div/div[8]/div[2]").innerHTML = data.product_attributes.details;
-            let lowest = haha.product_size_price[Object.keys(haha.product_size_price)[0]].price;
-            let highest = 0;
-            for (let i = 0; i < Object.keys(haha.product_size_price).length; i++) {
-                if (haha.product_size_price[Object.keys(haha.product_size_price)[i]].price < lowest)
-                    lowest = haha.product_size_price[Object.keys(haha.product_size_price)[i]].price;
-                if (haha.product_size_price[Object.keys(haha.product_size_price)[i]].price > highest)
-                    highest = haha.product_size_price[Object.keys(haha.product_size_price)[i]].price;
-            }
-            let priceString = lowest.toLocaleString();
-            if (highest != lowest)
-                priceString = lowest.toLocaleString() + ' to ₹' + highest.toLocaleString();
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML = "₹" + priceString;
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div/div/a/div").innerHTML = "Buy for ₹" + priceString;
-            swiper.appendSlide('<div data-v-1ee2ec34="" class="swiper-slide swiper-slide-active" style="height: auto;"> <div data-v-1ee2ec34="" class="d-flex align-items-center justify-content-center" style="height: 100%;"> <img data-v-1ee2ec34="" src="https://res.cloudinary.com/dx8gt3nnu/image/upload/q_auto,f_auto/dryp-shoe-pictures/' + name + '/display_picture.png" alt="display_picture.png" class="" style="width: 100%; height: 100%; max-height: 500px; max-width: 500px; padding: 50px; object-fit: contain; cursor: zoom-in;"></div></div>');
-            for (let i = 0; i < data.product_attributes.image_list.length; i++) {
-                swiper.appendSlide('<div data-v-1ee2ec34="" class="swiper-slide swiper-slide-active" style="height: auto;"> <div data-v-1ee2ec34="" class="d-flex align-items-center justify-content-center" style="height: 100%;"> <img data-v-1ee2ec34="" src="https://res.cloudinary.com/dx8gt3nnu/image/upload/q_auto,f_auto/dryp-shoe-pictures/' + name + '/' + (i + 1) + '.png" alt="display_picture.png" class="" style="width: 100%; height: 100%; max-height: 500px; max-width: 500px; padding: 50px; object-fit: contain; cursor: zoom-in;"></div></div>');
-            }
-        });
+        $.getJSON('https://solegasm.in/shoes/' + name+".json", function(data) {
+            namee=data.name;
+            price=data.price;
+            pic=data.thumbnail;
+            LoadPics(data.link);
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/h3").innerHTML = data.name;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]").innerHTML = "hehe";
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[4]/div[2]").innerHTML = "red";
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]").innerHTML = data.silhoutte;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[4]/div[2]").innerHTML = data.sku;            
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[5]/div[2]").innerHTML = data.description;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML = "₹"+ data.price; 
+            document.getElementById("pcPrice").innerHTML="Buy for ₹"+price;           
+        }).fail(function(){
+            
+            $.ajax({
+    url: 'https://xw7sbct9v6-1.algolianet.com/1/indexes/products/query?x-algolia-agent=Algolia%20for%20vanilla%20JavaScript%203.32.1&x-algolia-application-id=XW7SBCT9V6&x-algolia-api-key=6b5e76b49705eb9f51a06d3c82f7acee',
+    type: 'post',
+    data: `{"params":"query=${name}&facets=*&filters=&hitsPerPage=1"}`,
+    headers: {        
+        "accept": "application/json",
+        "accept-language": "en-US,en;q=0.9",
+        "content-type": "application/x-www-form-urlencoded"
+    },
+    success: function(data) {
+        let shoe = data.hits[0];
+        namee=shoe.name;
+            price="Inquire for price";
+            pic=shoe.thumbnail_url;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/h3").innerHTML = shoe.name;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]").innerHTML = shoe.make;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[4]/div[2]").innerHTML = shoe.style_id;                
+            if(shoe.description!="")      
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[5]/div[2]").innerHTML = shoe.description;
+            else
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[5]/div[2]").innerHTML = shoe.colorway;
+            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML = price; 
+            document.getElementById("pcPrice").innerHTML=price;
+            if(shoe.thumbnail_url.includes('.jpg'))
+            LoadPics(shoe.thumbnail_url.split('/images/').pop().split('.jpg')[0].replace("-Product",""));
+        else if(shoe.thumbnail_url.includes('.jpeg'))
+        LoadPics(shoe.thumbnail_url.split('/images/').pop().split('.jpeg')[0].replace("-Product",""));
+        else
+        LoadPics(shoe.thumbnail_url.split('/images/').pop().split('.png')[0].replace("-Product",""));
+        
+    }});
+    }
+);
 
         function SetSize(hehee) {
             size = hehee;
         }
 
         function Buy() {
-            window.open("https://wa.me/919996989031?text=" + namee + "  \n \n \n link: " + window.location.href);
+            window.open("https://wa.me/919996989031?text=" + namee +" ₹"+price + "  \n \n \n link: " + window.location.href, "_self");
         }
 
         function AllSneaker() {

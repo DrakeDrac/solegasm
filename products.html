@@ -14801,7 +14801,7 @@
             cursor: pointer
         }
         
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 768px) {
             .grid {
                 grid-template-columns: repeat(1, 1fr)
             }
@@ -14809,7 +14809,7 @@
         
         @media screen and (min-width: 400px)and (max-width: 600px) {
             .grid {
-                grid-template-columns: repeat(2, 1fr)
+                grid-template-columns: repeat(1, 1fr)
             }
         }
         
@@ -20796,7 +20796,7 @@
                     <div class="navbar navbar-default navbar-static-top" style="background: #000000;  position: fixed; top: 0px; width: 100%;">
                         <div class="container">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="index.html"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
+                                <a class="navbar-brand" href="./"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none;">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -20846,7 +20846,7 @@
                                         <!---->
                                     </div>
                                     <div data-v-0ee7448d="" class="no-more">
-                                        <!----><button data-v-0ee7448d="" class="black-button">
+                                        <!----><button id="donehehe" onclick="LoadMore()" data-v-0ee7448d="" class="black-button">
               LOAD MORE
             </button></div>
                                 </div>
@@ -20899,18 +20899,53 @@
     <script>
         let params = (new URL(document.location)).searchParams;
         let query = encodeURI(params.get("q"));
+        let numbShoes=15;
+        let start=0;
         if (query != "null") {
             document.getElementsByClassName("no-more")[0].remove();
-            $.getJSON("https://www.solesearchindia.com/admin-panel/api/search/buyer/" + query + "/150", function(data) {
-                let added = "";
-                if (data.products.hits.hits.length != 0) {
-                    for (let i = 0; i < data.products.hits.hits.length; i++) {
-                        let shoe = data.products.hits.hits[i]._source;
-                        if (added.includes(shoe.slug))
-                            continue;
-                        added += shoe.slug;
-                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product.html?p=' + shoe.slug + '","_self") src="https://res.cloudinary.com/dx8gt3nnu/image/upload/c_limit,dpr_1,h_150,q_auto,w_150,f_webp/dryp-shoe-pictures/' + shoe.slug + '/display_picture.png"+' + ' class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.slug + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price"> ₹' + shoe.price.toLocaleString() + ' </div> </div> </div>';
+            $.ajax({
+    url: 'https://xw7sbct9v6-1.algolianet.com/1/indexes/products/query?x-algolia-agent=Algolia%20for%20vanilla%20JavaScript%203.32.1&x-algolia-application-id=XW7SBCT9V6&x-algolia-api-key=6b5e76b49705eb9f51a06d3c82f7acee',
+    type: 'post',
+    data: `{"params":"query=${query}&facets=*&filters=&hitsPerPage=30"}`,
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
+        "accept": "application/json",
+        "accept-language": "en-US,en;q=0.9",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site"
+    },
+    success: function(data) {
+        if (data.hits.length != 0) {
+                    for (let i = 0; i < data.hits.length; i++) {
+                        let shoe = data.hits[i];
+                        let x=shoe.thumbnail_url.split("fill");
+                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.short_description + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.short_description + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price"> ₹' + "hehe" + ' </div> </div> </div>';
                     }
+                }
+    }
+});
+        }
+        else{
+            LoadMore();
+        }
+        function LoadMore(){
+            $.getJSON('https://solegasm.in/AllShoes.json', function(data) {
+                for (let i = start; i < numbShoes; i++) {
+                    $.getJSON('https://solegasm.in/shoes/'+data[i]+".json", function(shoe) {
+                        let x=shoe.thumbnail.split("fill");
+                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.link + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price"> ₹' + "hehe" + ' </div> </div> </div>';
+                        start++;
+                    });
+                }
+                numbShoes+=15;
+                if(numbShoes> data.length){
+                numbShoes=data.length;
+                let x= document.getElementById("donehehe");
+                x.innerHTML="Search for more shoes";
+                x.setAttribute("data-toggle","collapse");
+                x.setAttribute("data-target",".navbar-scollapse"); 
                 }
             });
         }
