@@ -20935,7 +20935,7 @@
                 for (let i = start; i < numbShoes; i++) {
                     $.getJSON('https://solegasm.in/shoes/'+data[i]+".json", function(shoe) {
                         let x=shoe.thumbnail.split("fill");
-                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.link + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price"> ₹' + "hehe" + ' </div> </div> </div>';
+                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.link + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price">₹' +shoe.price+ ' </div> </div> </div>';
                         start++;
                     });
                 }
