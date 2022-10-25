@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="initial-scale=1">
+  <meta charset="UTF-8">
+  <title>CodePen - Page Transition</title>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://media.istockphoto.com/photos/close-up-of-laced-sneaker-picture-id141339427?k=20&m=141339427&s=612x612&w=0&h=zs2ogmxSPcxWZEBBkKkwNl-htoGkS9l1gBc3JcDYGyE=');
+  background-position: center;
+  background-size: cover;
+  background-norepeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.wrapper {
+  margin: 0 15px;
+  max-width: 960px;
+}
+
+h1 {
+  position: relative;
+  top: 0px;
+  animation: title 2s ease-in forwards;
+}
+
+@keyframes title {
+  0% {top: -100vh;}
+  100% {top: 0;}
+}
+
+.content {
+  margin: 25px 0 50px 0;
+  position: relative;
+  bottom: 0;
+  animation: content 2s ease-in forwards;
+}
+
+@keyframes content {
+  0% {bottom: -100vh;}
+  100% {bottom: 0;}
+}
+
+.btn {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all .3s linear;
+  animation: btn 1.5s ease-in 1.5s forwards;
+}
+
+@keyframes btn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <h1>Welcome to Solegasm</h1>
+  <p class="content">
+    Major shoe companies do not stick to a set of factories to produce their shoes.They assign a certain number (i.e 50,000) Per model for each factory to produce.The thing about all these factories is that they do not produce just 50,000 pairs. They will produce 20,000 to 30,000 extra pairs, some even 50,000 pairs.Reason being is that they need this extra piece to replace the rejected pairs after they failed to pass quality inspection.What happens after the shoe company receives their 50,000 pairs of shoes is that they move production to another factory to produce the same pair of shoes.
+But what gets left behind in the old factory Is that 20,000 - 30,000 pairs of shoes that were rejected, or did not get to see QC because the shoe company has already reached their quota. So that is how the term “UNAUTHORIZED AUTHENTIC” came about. All this extra pairs that are left over, are produced at the same factory, by the same workers, with the same material, just that they did not get licensed/authorized/quality checked by the shoe company OR rejected by the shoe company for not meeting their standards. The factory then sells these leftover shoes to sneaker resellers, sneaker dealers, and online stores.
+  </p>
+  <a onclick="window.history.back()" class="btn">Return</a>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
