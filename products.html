@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <meta name="google-site-verification" content="a7B-rTSLHPuuhaUrkmmZWAFs4FqUKFkTnu9V5kZopw8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20191,7 +20192,12 @@
                 width: 75%
             }
         }
-        
+        @media(max-width: 768px){
+.navbar-brand {
+    position:absolute; 
+    left:calc(100vw/2.5)
+}
+}
         @media screen and (max-width: 650px) {
             .product-status .confirm-sale .sneaker-detail[data-v-dcc89826] {
                 width: 100%
@@ -21105,12 +21111,10 @@
                     <div class="navbar navbar-default navbar-static-top" style="background: #000000;  position: fixed; top: 0px; width: 100%;">
                         <div class="container">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="./"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none;">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
+                                <div class="navbar-brand" ><img src="./index_files/logo2_eqtbdy.png" onclick='window.open("./", "_self")' style="height:40px;" alt="logo"></div>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none; top:-15px;">
+                                    <img src="./ok.png" width="25px" height="25px">
+                                </button>
                                 <a data-v-4b7cb19b="" data-toggle="collapse" data-target=".navbar-scollapse" target="_self" class="navbar-search">
                                     <svg data-v-4b7cb19b="" viewBox="0 0 16 16" width="2em" height="2em" focusable="false" role="img" aria-label="search" xmlns="http://www.w3.org/2000/svg" fill="white" class="bi-search b-icon bi">
                                  <g data-v-4b7cb19b="">

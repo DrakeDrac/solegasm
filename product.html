@@ -18,6 +18,7 @@
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -19314,6 +19315,12 @@
     bottom:0px;
 }
 }
+@media(max-width: 768px){
+.navbar-brand {
+    position:absolute; 
+    left:calc(100vw/2.5)
+}
+}
 .canvas {
   /*border: 1px solid red;*/
   width: 360px;
@@ -19356,6 +19363,7 @@ input[type=text]{
     </style>
     <script src='https://unpkg.com/@its2easy/animate-images'></script>
     <script>
+        var xy;
         function LoadPics(ok){
         $.ajax({
     url:`https://res.cloudinary.com/dmbkv8jp3/image/upload/v1666005597/${ok}/img1.webp`,
@@ -19387,6 +19395,7 @@ input[type=text]{
           dragModifier: 1.5,
           touchScrollMode: "allowPageScroll"
         });
+        xy=instance1;
         instance1.preloadImages();
         instance1.playFrames(36);   
     }
@@ -19408,12 +19417,10 @@ input[type=text]{
                         <div class="navbar navbar-default navbar-static-top" style="background: #000000;  position: fixed; top: 0px; width: 100%;">
                             <div class="containere">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="./"><img src="./index_files/logo2_eqtbdy.png" style="height:40px;" alt="logo" /></a>
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none;">
-                                                    <span class="icon-bar"></span>
-                                                    <span class="icon-bar"></span>
-                                                    <span class="icon-bar"></span>
-                                                </button>
+                                    <div class="navbar-brand"><img src="./index_files/logo2_eqtbdy.png" onclick='window.open("./", "_self")' style="height:40px;" alt="logo"></div>
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="padding: 20px; border: none; background: none; top:-15px;">
+                                        <img src="./ok.png" width="25px" height="25px">
+                                    </button>
                                     <a data-v-4b7cb19b="" data-toggle="collapse" data-target=".navbar-scollapse" target="_self" class="navbar-search">
                                         <svg data-v-4b7cb19b="" viewBox="0 0 16 16" width="2em" height="2em" focusable="false" role="img" aria-label="search" xmlns="http://www.w3.org/2000/svg" fill="white" class="bi-search b-icon bi">
                                              <g data-v-4b7cb19b="">
@@ -19446,7 +19453,7 @@ input[type=text]{
                                     <div class="img-container">
                                         <div class="container pt-4 pb-5">
                                             <div class="canvas1-block">
-                                              <canvas id="canvas1" class="canvas canvas1" width="200" height="150"></canvas>
+                                              <canvas id="canvas1" onclick="xy.playFrames(18);" class="canvas canvas1" width="200" height="150"></canvas>
                                             </div>
                                       </div>
                                     </div>
@@ -19481,7 +19488,7 @@ input[type=text]{
                                             <div data-v-271187bc="" class="container">
                                                 <div data-v-271187bc="">
                                                     <div data-v-271187bc="" class="title">Authenticity</div>
-                                                    <div data-v-271187bc="" class="value"><a href="./UA">100% UA (Click to know more)</a></div>
+                                                    <div data-v-271187bc="" class="value"><a style="text-decoration: underline; " href="./UA">100% UA (Click to know more)</a></div>
                                                 </div>
                                                 <div data-v-271187bc="">
                                                     <div data-v-271187bc="" class="title">product type</div>
