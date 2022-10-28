@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Admin Panel</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="./dropdown.css">
@@ -13,15 +14,114 @@
     <script src="./js/jsoneditor.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+        
         // Set the default CSS theme and icon library globally
         JSONEditor.defaults.theme = 'spectre';
         JSONEditor.defaults.iconlib = 'spectre';
     </script>
     <style>
+        
+
         .container {
             max-width: 960px;
             margin: 0 auto
         }
+        body {
+  color: #000000;
+  font-family: Sans-Serif;
+  padding: 30px;
+  background-color: #f6f6f6;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  list-style-type: none;
+  z-index: 999;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
     </style>
 </head>
 
@@ -34,25 +134,43 @@
             <div class='column col-md-6'>
                 <p>Add Shoes here</p>
             </div>
-            <div class="px-app px-dropdown" style=" z-index:999;">
-                <h2>Select brand</h2>
-                <input class="px-dropdown-value" type="hidden" value="value1">
-                <div class="px-dropdown-input">
-                    <input type="text" readonly="" value="Jordans">
-                    <i class="bx bx-chevron-down"></i>
+            <input type="text" id="Token" placeholder="password"><br><br>
+            <label class="dropdown">
+
+                <div id="Brand" class="dd-button">
+                  Nike
                 </div>
-                <div class="px-dropdown-panel">
-                    <p data-value="value1">Jordans</p>
-                    <p data-value="value2">Nike</p>
-                    <p data-value="value3">Adidas</p>
+              
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li onclick="SelectedBrand('nike')" >Nike</li>
+                  <li onclick="SelectedBrand('jordan')" >Jordans</li>
+                  <li onclick="SelectedBrand('adidas')" >Adidas</li>
+                  <li onclick="SelectedBrand('converse')" >Converse</li>
+                  <li onclick="SelectedBrand('dior')" >Dior</li>
+                  <li onclick="SelectedBrand('vans')" >Vans</li>
+                </ul>
+                
+              </label>
+
+              <label class="dropdown">
+
+                <div id="ShoeName" class="dd-button">
+                  Select Shoe here
                 </div>
-            </div>
-        </div>
+              
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul id="Shoes" class="dd-menu">
+                </ul>
+                
+              </label>
         <div class='columns'>
             <div class='column col-md-12'>
-                <input type="text" id="Token" placeholder="place token here..."><br><br>
                 <button id='submit' onclick="publish()" class="btn btn-sm btn-primary">Publish</button>
                 <span id='valid_indicator' class='label'></span>
+                <div id="pic"></div>
             </div>
         </div>
         <div class='columns'>
@@ -68,12 +186,10 @@
                 format: "grid"
             },
         });
-        editor.on('ready', function() {
-            $.getJSON("./shoes.json", function(data) {
-                editor.setValue(data);
-            });
-        });
 
+        editor.on('change', function() {
+            SelectedBrand('nike');
+        });
         editor.on('change', function() {
             var errors = editor.validate();
 
@@ -90,16 +206,22 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
         function publish() {
-            console.log(editor.getValue());
-            let token = document.getElementById("Token").value;
+            let pass = document.getElementById("Token").value;
             var content = btoa(JSON.stringify(editor.getValue()));
-            console.log(content);
-            //$.getJSON("https://api.github.com/repos/drakedrac/solegasm/contents/shoes.json", function(data) {
-            //    uploadFileApi(token, content, data.sha)
-            //});
+            let url=`https://api.allorigins.win/get?url=${ encodeURIComponent('https://cutt.ly/'+pass)}`;
+            console.log(url);
+            let token="";
+            $.getJSON(url, function(data) {
+                token=data.contents;                
+            $.getJSON(`https://api.github.com/repos/drakedrac/solegasm/contents/shoes/${document.getElementById("ShoeName").innerHTML}.json`, function(data) {
+                uploadFileApi(token, content, data.sha)
+                console.log(data);
+            });
+            });
 
             function uploadFileApi(token, content, sha) {
 
+                console.log(token);
                 var data = JSON.stringify({
                     "message": "json file",
                     "content": `${content}`,
@@ -108,7 +230,7 @@
 
                 var config = {
                     method: 'put',
-                    url: 'https://api.github.com/repos/drakedrac/solegasm/contents/shoes.json',
+                    url: `https://api.github.com/repos/drakedrac/solegasm/contents/shoes/${document.getElementById("ShoeName").innerHTML}.json`,
 
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -121,38 +243,36 @@
                     .then(function(response) {
                         console.log(JSON.stringify(response.data));
                         document.getElementById("valid_indicator").innerHTML = "Success";
+                        window.alert("Successfully updated, will usually be updated in 60 seconds.");
                     })
                     .catch(function(error) {
                         console.log(error);
                         document.getElementById("valid_indicator").innerHTML = error;
+                        window.alert("Error, contact drakeeddd");
                     });
             }
         }
-        const initpXDropdown = () => {
-            const dropdownList = document.querySelectorAll(".px-dropdown");
-            window.addEventListener("click", () => {
-                dropdownList.forEach((item) => {
-                    item.classList.remove("active");
+        let shoe="";
+        function SelectedShoe(ok){
+            document.getElementById("ShoeName").innerHTML=ok;
+            $.getJSON(`https://solegasm.in/shoes/${ok}.json`, function(data) {
+                console.log(data);
+                editor.setValue(data);
+                document.getElementById("pic").innerHTML=`<img width="50%" src='${editor.getValue().thumbnail}'>`
+            
+            });
+        }
+        function SelectedBrand(ok){
+            document.getElementById("Brand").innerHTML=ok;
+            document.getElementById("Shoes").innerHTML="";
+            $.getJSON("https://solegasm.in/AllShoes.json", function(data) {
+                data.forEach((item) =>{
+                    if(String(item).toLowerCase().includes(ok)){
+                        document.getElementById("Shoes").innerHTML+=`<li onclick="SelectedShoe('${item}')" >`+item+'</li>';
+                    }                    
                 });
             });
-            dropdownList.forEach((item) => {
-                const dropdownValue = item.querySelector(".px-dropdown-value");
-                const dropdownInput = item.querySelector(".px-dropdown-input");
-                const dropdownPanelOptions = item.querySelectorAll(".px-dropdown-panel p");
-                dropdownInput.addEventListener("click", (event) => {
-                    event.stopPropagation();
-                    item.classList.toggle("active");
-                });
-                dropdownPanelOptions.forEach((item) => {
-                    item.addEventListener("click", (event) => {
-                        dropdownInput.querySelector("input").value = event.target.innerHTML;
-                        dropdownValue.value = event.target.getAttribute("data-value");
-                    });
-                });
-            });
-        };
-
-        initpXDropdown();
+        }        
     </script>
 </body>
 
