@@ -541,6 +541,7 @@
                 for (let i = 0; i < 4; i++)
                     swiper[2].removeSlide(0);
                     $.getJSON('https://solegasm.in/isSale.json', function(datas) {
+                        
                 $.getJSON('https://solegasm.in/' + elem.children[1].textContent+'.json', function(data) {
                     for (let i = 0; i < 4; i++) {
                         let x=data[i].pic.split("fill");
@@ -552,6 +553,12 @@
         else
         ok=data[i].pic.split('/images/').pop().split('.png')[0].replace("-Product","");
         let Link= `https://res.cloudinary.com/dmbkv8jp3/image/upload/v1666005597/${ok}/img1.webp`;
+        if(datas.sale=="true"){
+            $.getJSON('https://solegasm.in/shoes/'+ok+".json", function(shoe) {
+                swiper[2].appendSlide('<div data-v-eea289c8="" class="swiper-slide" style="width: 310px; height: 310px; margin-right: 30px;"> <div data-v-eea289c8="" class="container"><div data-v-eea289c8="" class="cursor"><img data-v-eea289c8="" src="' + Link + '" width="200" height="200" '+`onerror="this.onerror=null;this.src='`+x[0]+"fill"+ x[1].replace("700","200").replace("500","200").replace("300","200").replace("215","200")+'";"'+' class="" onclick=window.open("./product?p=' + ok + '","_self")></div><div data-v-eea289c8="" class="product-name">' + data[i].name + '</div><div data-v-eea289c8="" class="lowest-ask">Price</div><p data-v-eea289c8="" class="product-price">₹' + shoe.Saleprice + '</p></div></div>');
+            });
+        }
+        else
                         swiper[2].appendSlide('<div data-v-eea289c8="" class="swiper-slide" style="width: 310px; height: 310px; margin-right: 30px;"> <div data-v-eea289c8="" class="container"><div data-v-eea289c8="" class="cursor"><img data-v-eea289c8="" src="' + Link + '" width="200" height="200" '+`onerror="this.onerror=null;this.src='`+x[0]+"fill"+ x[1].replace("700","200").replace("500","200").replace("300","200").replace("215","200")+'";"'+' class="" onclick=window.open("./product?p=' + ok + '","_self")></div><div data-v-eea289c8="" class="product-name">' + data[i].name + '</div><div data-v-eea289c8="" class="lowest-ask">Price</div><p data-v-eea289c8="" class="product-price">₹' + data[i].price + '</p></div></div>');
                     }
                 });
