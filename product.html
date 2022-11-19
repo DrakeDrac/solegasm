@@ -42,6 +42,7 @@
         let namee="";
         let pic="";
         let price="";
+        let Saleprice="";
 
         function getElementByXpath(path) {
             return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -51,6 +52,7 @@
             namee=data.name;
             price=data.price;
             pic=data.thumbnail;
+            Saleprice=data.Saleprice;
             LoadPics(data.link);
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/h3").innerHTML = data.name;
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]").innerHTML = "hehe";
@@ -125,7 +127,12 @@
         }
 
         function Buy() {
-            window.open("https://wa.me/919996989031?text=" + namee +" ₹"+price + "  \n \n \n link: " + window.location.href, "_self");
+            $.getJSON('https://solegasm.in/isSale.json', function(datas) {
+                let texxt=" ₹"+price ;
+                if(datas.sale=="true")
+                texxt=" ~₹"+price + "~ ₹"+Saleprice ;
+            window.open("https://wa.me/919996989031?text=" + namee +texxt+" link: " + window.location.href, "_self");
+            });
         }
 
         function AllSneaker() {
