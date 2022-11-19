@@ -5,6 +5,7 @@
         var obj;
         if (query != "null") {
             document.getElementsByClassName("no-more")[0].remove();
+            $.getJSON('https://solegasm.in/isSale.json', function(datas) {
             $.ajax({
     url: 'https://xw7sbct9v6-1.algolianet.com/1/indexes/products/query?x-algolia-agent=Algolia%20for%20vanilla%20JavaScript%203.32.1&x-algolia-application-id=XW7SBCT9V6&x-algolia-api-key=6b5e76b49705eb9f51a06d3c82f7acee',
     type: 'post',
@@ -47,7 +48,10 @@
     {   
         $.getJSON('https://solegasm.in/shoes/'+Link+".json", function(shoee) {
             var temp=elem.innerHTML;
-            elem.innerHTML ='<div data-v-2f1ee77c="" product-price="'+shoee.price+'" class="sneaker own" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.short_description + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.short_description + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price"> ₹' + shoee.price + ' </div> </div> </div>' + temp;                      
+            let price=shoee.price;
+            if(datas.sale=="true")
+                price=shoee.Saleprice;
+            elem.innerHTML ='<div data-v-2f1ee77c="" product-price="'+shoee.price+'" class="sneaker own" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.short_description + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.short_description + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price"> ₹' + price + ' </div> </div> </div>' + temp;                      
                     });        
     }});                        
                     }
@@ -61,17 +65,22 @@
                 }
     }
 });
+});
 console.clear();
         }
         else{
             LoadMore();
         }
         function LoadMore(){
+            $.getJSON('https://solegasm.in/isSale.json', function(datas) {
             $.getJSON('https://solegasm.in/AllShoes.json', function(data) {
                 for (let i = start; i < numbShoes; i++) {
                     $.getJSON('https://solegasm.in/shoes/'+data[i]+".json", function(shoe) {
                         let x=shoe.thumbnail.split("fill");
-                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.link + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price">₹' +shoe.price+ ' </div> </div> </div>';
+                        let price=shoe.price;
+                        if(datas.sale=="true")
+                        price=shoe.Saleprice;
+                        document.getElementsByClassName("grid")[0].innerHTML += '<div data-v-2f1ee77c="" class="sneaker" style="margin-left: auto; margin-right: auto; width:100%;"> <div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" onclick=window.open("./product?p=' + shoe.link + '","_self") src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","215") + '" class=""></div> <div data-v-2f1ee77c="" class="w-75"> <div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + ' </a></div> <div data-v-2f1ee77c="" class="lowest-ask"> Current Price </div> <div data-v-2f1ee77c="" class="product-price">₹' +price+ ' </div> </div> </div>';
                     });
                     start++;
                 }
@@ -84,6 +93,7 @@ console.clear();
                 x.setAttribute("data-target",".navbar-scollapse"); 
                 }
             });
+        });
         }
 
         function AllSneaker() {

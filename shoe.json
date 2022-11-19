@@ -1,29 +1,35 @@
 {
     "$ref": "basic_shoe.json",
     "properties": {
-        "shoes": {
-            "type": "array",
-            "format": "table",
-            "title": "Shoes",
-            "uniqueItems": true,
-            "items": {
-                "type": "object",
-                "properties": {
                     "name": {
                         "type": "string"
                     },
                     "link": {
                         "type": "string"
                     },
-                    "priceSize": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "title": "size"
-                        }
+                    "thumbnail": {
+                        "type": "string"
+                    },
+                    "brand": {
+                        "type": "string"
+                    },
+                    "sku": {
+                        "type": "string"
+                    },
+                    "price": {
+                        "type": "string"
+                    },
+                    "Saleprice": {
+                        "type": "string"
+                    },
+                    "make": {
+                        "type": "string"
+                    },
+                    "silhoutte": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
                     }
-                }
-            }
-        }
     }
 }

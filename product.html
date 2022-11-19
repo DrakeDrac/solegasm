@@ -58,16 +58,15 @@
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div[2]").innerHTML = data.silhoutte;
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[4]/div[2]").innerHTML = data.sku;            
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[5]/div[2]").innerHTML = data.description;
-            let sale=false;
-            $.getJSON("https://solegasm.in/isSale.json", function(data){
-            if(data.sale=="true")
-            sale=true;
-        }).then(function(){
-            if(sale)
-            price="hehe";
-            getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML ="₹"+ price; 
-            document.getElementById("pcPrice").innerHTML="Buy for ₹"+price;
-        })      
+            $.getJSON("https://solegasm.in/isSale.json", function(datas){
+            if(datas.sale=="true")
+            {
+                getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML ="₹"+ data.Saleprice; 
+            }
+            else{
+                getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML ="₹"+ price; 
+            }
+        });  
         }).fail(function(){
             
             $.ajax({
@@ -92,7 +91,6 @@
             else
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div/div/div[5]/div[2]").innerHTML = shoe.colorway;
             getElementByXpath("/html/body/div/div/div/div[2]/div[2]/div[4]/button/div[2]").innerHTML = price; 
-            document.getElementById("pcPrice").innerHTML=price;
             if(shoe.thumbnail_url.includes('.jpg'))
             LoadPics(shoe.thumbnail_url.split('/images/').pop().split('.jpg')[0].replace("-Product",""));
         else if(shoe.thumbnail_url.includes('.jpeg'))
@@ -107,15 +105,20 @@
         else
         window.open("https://solegasm.in/", "_self");
         function Recommended(){
+            $.getJSON('https://solegasm.in/isSale.json', function(datas) {
         $.getJSON('https://solegasm.in/AllShoes.json', function(data) {
             var randomnumber = Math.floor(Math.random() * (50));
             for (let i = randomnumber; i < randomnumber+6; i++) {
                     $.getJSON('https://solegasm.in/shoes/'+data[i]+".json", function(shoe) {
                         let x=shoe.thumbnail.split("fill");
-                        document.getElementsByClassName('grid')[0].innerHTML+='<div data-v-2f1ee77c="" class="sneaker"><div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","300") + '" onclick=window.open("./product?p=' + shoe.link + '","_self") alt="" class=""></div><div data-v-2f1ee77c="" class="w-75"><div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + '</a></div><div data-v-2f1ee77c="" class="lowest-ask"> Price: </div><div data-v-2f1ee77c="" class="product-price"> ₹' + shoe.price + ' </div></div></div>';                    
+                        let price=shoe.price;
+                        if(datas.sale=="true")
+                        price=shoe.Saleprice;
+                        document.getElementsByClassName('grid')[0].innerHTML+='<div data-v-2f1ee77c="" class="sneaker"><div data-v-2f1ee77c="" class="sneaker__img mt-4"><img data-v-2f1ee77c="" src="' + x[0]+"fill"+ x[1].replace("700","300").replace("500","300") + '" onclick=window.open("./product?p=' + shoe.link + '","_self") alt="" class=""></div><div data-v-2f1ee77c="" class="w-75"><div data-v-2f1ee77c="" class="product-name"><a data-v-2f1ee77c="" href="./product?p=' + shoe.link + '">' + shoe.name + '</a></div><div data-v-2f1ee77c="" class="lowest-ask"> Price: </div><div data-v-2f1ee77c="" class="product-price"> ₹' + price + ' </div></div></div>';                    
                     });
                 }
         });
+    });
     }
         function SetSize(hehee) {
             size = hehee;
