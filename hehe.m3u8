@@ -1,0 +1,315 @@
+#EXTM3U  x-tvg-url="https://github.com/mitthu786/tvepg/raw/main/epg.xml.gz"
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Cricket_English.png" group-title="Sports",Jio Cricket English HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1918/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_HD.png" group-title="Entertainment",Colors HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/144/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png" group-title="Entertainment",SET HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/291/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_TV_HD.png" group-title="Entertainment",Zee TV HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/167/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_HD.png" group-title="Movies",Sony Max HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/476/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Cinema_HD.png" group-title="Movies",Zee Cinema HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/165/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Six_HD.png" group-title="Sports",Sony Ten 5 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/155/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Times_NOW.png" group-title="News",Times NOW 
+http://moj.drakedsshitpost.repl.co/getm3u8/383/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Times_Now_Navbharat.png" group-title="News",Times Now Navbharat 
+http://moj.drakedsshitpost.repl.co/getm3u8/1906/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_HD.png" group-title="Sports",Sony Ten 1 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/162/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Aaj_Tak.png" group-title="News",Aaj Tak 
+http://moj.drakedsshitpost.repl.co/getm3u8/173/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/BBC_Marathi.png" group-title="News",BBC Marathi 
+http://moj.drakedsshitpost.repl.co/getm3u8/1155/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ABP_News_India.png" group-title="News",ABP News India 
+http://moj.drakedsshitpost.repl.co/getm3u8/177/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten2_HD.png" group-title="Sports",Sony Ten 2 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/891/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ABP_Majha.png" group-title="News",ABP Majha 
+http://moj.drakedsshitpost.repl.co/getm3u8/612/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Hindi.png" group-title="Kids",Nick Hindi 
+http://moj.drakedsshitpost.repl.co/getm3u8/545/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TV9_Karnataka.png" group-title="News",TV9 Karnataka 
+http://moj.drakedsshitpost.repl.co/getm3u8/619/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Pogo_Hindi.png" group-title="Kids",Pogo Hindi 
+http://moj.drakedsshitpost.repl.co/getm3u8/559/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Polimer_News.png" group-title="News",Polimer News 
+http://moj.drakedsshitpost.repl.co/getm3u8/636/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TV9_Telugu_News.png" group-title="News",TV9 Telugu News 
+http://moj.drakedsshitpost.repl.co/getm3u8/618/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Cartoon_Network_Hindi.png" group-title="Kids",Cartoon Network Hindi 
+http://moj.drakedsshitpost.repl.co/getm3u8/816/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Discovery_HD_World.png" group-title="Infotainment",Discovery HD World 
+http://moj.drakedsshitpost.repl.co/getm3u8/463/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ABP_Ananda.png" group-title="News",ABP Ananda 
+http://moj.drakedsshitpost.repl.co/getm3u8/672/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_BBC_Earth_HD.png" group-title="Infotainment",Sony BBC Earth HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/821/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/History_HD.png" group-title="Infotainment",History TV18 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/146/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TLC_HD_World.png" group-title="Lifestyle",TLC HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/479/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Food_Food.png" group-title="Lifestyle",Food Food 
+http://moj.drakedsshitpost.repl.co/getm3u8/561/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NDTV_Good_Times.png" group-title="Lifestyle",GOOD TiMES 
+http://moj.drakedsshitpost.repl.co/getm3u8/560/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Business.png" group-title="Business",Zee Business 
+http://moj.drakedsshitpost.repl.co/getm3u8/657/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_SAB.png" group-title="Entertainment",Sony SAB 
+http://moj.drakedsshitpost.repl.co/getm3u8/154/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/And_TV_HD.png" group-title="Entertainment",And TV HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/472/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Rishtey.png" group-title="Entertainment",Rishtey 
+http://moj.drakedsshitpost.repl.co/getm3u8/279/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Anmol.png" group-title="Entertainment",Zee Anmol 
+http://moj.drakedsshitpost.repl.co/getm3u8/473/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pal.png" group-title="Entertainment",Sony Pal 
+http://moj.drakedsshitpost.repl.co/getm3u8/474/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_SAB_HD.png" group-title="Entertainment",Sony SAB HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/471/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Marathi.png" group-title="Entertainment",Zee Marathi 
+http://moj.drakedsshitpost.repl.co/getm3u8/445/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Marathi_HD.png" group-title="Entertainment",Colors Marathi HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/755/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Kannada_HD.png" group-title="Entertainment",Colors Kannada HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/757/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Kannada.png" group-title="Entertainment",Zee Kannada 
+http://moj.drakedsshitpost.repl.co/getm3u8/689/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Comedy_Central_HD.png" group-title="Entertainment",Comedy Central HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1157/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Telugu.png" group-title="Entertainment",Zee Telugu 
+http://moj.drakedsshitpost.repl.co/getm3u8/638/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Tamil.png" group-title="Entertainment",Zee Tamil 
+http://moj.drakedsshitpost.repl.co/getm3u8/628/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Gujarati.png" group-title="Entertainment",Colors Gujarati 
+http://moj.drakedsshitpost.repl.co/getm3u8/196/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Bangla.png" group-title="Entertainment",Zee Bangla 
+http://moj.drakedsshitpost.repl.co/getm3u8/625/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Bengali_HD.png" group-title="Entertainment",Colors Bengali HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/756/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Epic_HD.png" group-title="Entertainment",Epic 
+http://moj.drakedsshitpost.repl.co/getm3u8/481/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Infinity_HD.png" group-title="Entertainment",Colors Infinity HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1158/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Yuva.png" group-title="Entertainment",Zee Yuva 
+http://moj.drakedsshitpost.repl.co/getm3u8/414/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/PTC_Punjabi.png" group-title="Entertainment",PTC Punjabi 
+http://moj.drakedsshitpost.repl.co/getm3u8/1171/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ID.png" group-title="Entertainment",Investigation Discovery 
+http://moj.drakedsshitpost.repl.co/getm3u8/527/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_India.png" group-title="Entertainment",DD India 
+http://moj.drakedsshitpost.repl.co/getm3u8/528/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_National.png" group-title="Entertainment",DD National 
+http://moj.drakedsshitpost.repl.co/getm3u8/202/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Dabangg.png" group-title="Entertainment",Dabangg 
+http://moj.drakedsshitpost.repl.co/getm3u8/532/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Cineplex.png" group-title="Movies",Colors Cineplex 
+http://moj.drakedsshitpost.repl.co/getm3u8/482/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pix_HD.png" group-title="Movies",Sony Pix HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/762/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_SD.png" group-title="Movies",Sony Max SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/289/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_MAX2.png" group-title="Movies",Sony MAX2 
+http://moj.drakedsshitpost.repl.co/getm3u8/483/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/And_Pictures_HD.png" group-title="Movies",And Pictures HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/185/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Cinema.png" group-title="Movies",Zee Cinema 
+http://moj.drakedsshitpost.repl.co/getm3u8/484/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/B4U_Movies.png" group-title="Movies",B4U Movies 
+http://moj.drakedsshitpost.repl.co/getm3u8/182/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Cinema.png" group-title="Movies",Jio Cinema 
+http://moj.drakedsshitpost.repl.co/getm3u8/1074/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Classic.png" group-title="Movies",Zee Bollywood 
+http://moj.drakedsshitpost.repl.co/getm3u8/487/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Bhojpuri_Cinema.png" group-title="Movies",Bhojpuri Cinema 
+http://moj.drakedsshitpost.repl.co/getm3u8/486/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Enterr_10.png" group-title="Entertainment",Enterr 10 
+http://moj.drakedsshitpost.repl.co/getm3u8/485/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Action.png" group-title="Movies",Zee Action 
+http://moj.drakedsshitpost.repl.co/getm3u8/488/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Cinemalu.png" group-title="Movies",Zee Cinemalu 
+http://moj.drakedsshitpost.repl.co/getm3u8/413/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Anmol_Cinema.png" group-title="Movies",Zee Anmol Cinema 
+http://moj.drakedsshitpost.repl.co/getm3u8/415/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/IBN_7.png" group-title="News",News 18 India 
+http://moj.drakedsshitpost.repl.co/getm3u8/231/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/India_TV.png" group-title="News",India TV 
+http://moj.drakedsshitpost.repl.co/getm3u8/235/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NDTV_India.png" group-title="News",NDTV India 
+http://moj.drakedsshitpost.repl.co/getm3u8/258/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_News.png" group-title="News",Zee News 
+http://moj.drakedsshitpost.repl.co/getm3u8/504/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Times_Now_HD.png" group-title="News",Times Now World 
+http://moj.drakedsshitpost.repl.co/getm3u8/876/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NDTV_24x7.png" group-title="News",NDTV 24x7 
+http://moj.drakedsshitpost.repl.co/getm3u8/255/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/News_24.png" group-title="News",News 24 
+http://moj.drakedsshitpost.repl.co/getm3u8/501/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TV9_Maharashtra.png" group-title="News",TV9 Maharashtra 
+http://moj.drakedsshitpost.repl.co/getm3u8/617/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/BTV.png" group-title="News",BTV 
+http://moj.drakedsshitpost.repl.co/getm3u8/938/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_24_Taas.png" group-title="News",Zee 24 Taas 
+http://moj.drakedsshitpost.repl.co/getm3u8/442/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Newslive.png" group-title="News",Newslive 
+http://moj.drakedsshitpost.repl.co/getm3u8/613/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten3_HD.png" group-title="Sports",Sony Ten 3 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/892/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Sports.png" group-title="Sports",Jio Sports HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/889/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Dsports_HD.png" group-title="Sports",Eurosport HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/875/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football.png" group-title="Sports",Jio Football HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1156/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Cricket_1_HD.png" group-title="Sports",Jio Cricket 1 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1160/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_1.png" group-title="Sports",Jio Football 1 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1165/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_2.png" group-title="Sports",Jio Football 2 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1167/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_3.png" group-title="Sports",Jio Football 3 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1168/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_4.png" group-title="Sports",Jio Football 4 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1169/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_1.png" group-title="Sports",Sony Ten 1 
+http://moj.drakedsshitpost.repl.co/getm3u8/514/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_2.png" group-title="Sports",Ten 2 
+http://moj.drakedsshitpost.repl.co/getm3u8/523/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_3.png" group-title="Sports",Sony Ten 3 
+http://moj.drakedsshitpost.repl.co/getm3u8/524/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Six_SD.png" group-title="Sports",Sony Ten 5 
+http://moj.drakedsshitpost.repl.co/getm3u8/525/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zing.png" group-title="Music",Zing 
+http://moj.drakedsshitpost.repl.co/getm3u8/585/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/9XM.png" group-title="Music",9XM 
+http://moj.drakedsshitpost.repl.co/getm3u8/587/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/E_24.png" group-title="Music",E 24 
+http://moj.drakedsshitpost.repl.co/getm3u8/591/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/B4U_Music.png" group-title="Music",B4U Music 
+http://moj.drakedsshitpost.repl.co/getm3u8/183/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zoom.png" group-title="Music",ZOOM 
+http://moj.drakedsshitpost.repl.co/getm3u8/592/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/MTV.png" group-title="Music",MTV 
+http://moj.drakedsshitpost.repl.co/getm3u8/248/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/9X_Jalwa.png" group-title="Music",9X Jalwa 
+http://moj.drakedsshitpost.repl.co/getm3u8/440/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Public_Music.png" group-title="Music",Public Music 
+http://moj.drakedsshitpost.repl.co/getm3u8/773/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jaya_Max.png" group-title="Music",Jaya Max 
+http://moj.drakedsshitpost.repl.co/getm3u8/420/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sangeet_Bhojpuri.png" group-title="Music",Sangeet Bhojpuri 
+http://moj.drakedsshitpost.repl.co/getm3u8/741/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/PTC_Music.png" group-title="Music",PTC Music 
+http://moj.drakedsshitpost.repl.co/getm3u8/1189/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sangeet_Bangla.png" group-title="Music",Sangeet Bangla 
+http://moj.drakedsshitpost.repl.co/getm3u8/740/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/sonic_Hindi.png" group-title="Kids",Sonic Hindi 
+http://moj.drakedsshitpost.repl.co/getm3u8/815/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Yay_Hindi.png" group-title="Kids",Sony Yay Hindi 
+http://moj.drakedsshitpost.repl.co/getm3u8/872/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Nickelodeon.png" group-title="Kids",Nickelodeon 
+http://moj.drakedsshitpost.repl.co/getm3u8/547/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/PTC_Punjabi_Gold.png" group-title="Movies",PTC Punjabi Gold  
+http://moj.drakedsshitpost.repl.co/getm3u8/1190/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_BBC_Earth_SD.png" group-title="Infotainment",Sony BBC Earth SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/823/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_Sports.png" group-title="Sports",DD Sports 
+http://moj.drakedsshitpost.repl.co/getm3u8/204/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/MK_Music.png" group-title="Music",MK Music 
+http://moj.drakedsshitpost.repl.co/getm3u8/845/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Music_India.png" group-title="Music",Music India 
+http://moj.drakedsshitpost.repl.co/getm3u8/250/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Tunes_6.png" group-title="Music",Tunes 6 
+http://moj.drakedsshitpost.repl.co/getm3u8/803/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Raj_Music_Kannada.png" group-title="Music",Raj Music Kannada 
+http://moj.drakedsshitpost.repl.co/getm3u8/743/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Ramdhenu.png" group-title="Music",Ramdhenu 
+http://moj.drakedsshitpost.repl.co/getm3u8/639/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Raj_Musix.png" group-title="Music",Raj Musix 
+http://moj.drakedsshitpost.repl.co/getm3u8/748/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/PTC_Chak_De.png" group-title="Music",PTC Chak De 
+http://moj.drakedsshitpost.repl.co/getm3u8/1172/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/9X_Tashan.png" group-title="Music",9X Tashan 
+http://moj.drakedsshitpost.repl.co/getm3u8/732/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sahana_Music.png" group-title="Music",Sahana Music 
+http://moj.drakedsshitpost.repl.co/getm3u8/749/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/PTC_DHOL_TV.png" group-title="Music",PTC DHOL TV 
+http://moj.drakedsshitpost.repl.co/getm3u8/1188/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DD_News.png" group-title="News",DD News 
+http://moj.drakedsshitpost.repl.co/getm3u8/203/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Media_One_TV.png" group-title="News",Media One TV 
+http://moj.drakedsshitpost.repl.co/getm3u8/910/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_24_Kalak.png" group-title="News",Zee 24 Kalak 
+http://moj.drakedsshitpost.repl.co/getm3u8/929/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/BBC_World_News.png" group-title="News",BBC World News 
+http://moj.drakedsshitpost.repl.co/getm3u8/142/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Discovery_Turbo.png" group-title="Infotainment",Discovery Turbo 
+http://moj.drakedsshitpost.repl.co/getm3u8/541/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_BBC_Earth_HD_English.png" group-title="Infotainment",Sony BBC Earth HD English 
+http://moj.drakedsshitpost.repl.co/getm3u8/852/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Anaadi_TV.png" group-title="News",Anaadi TV 
+http://moj.drakedsshitpost.repl.co/getm3u8/1728/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Live_7.png" group-title="News",Live 7 
+http://moj.drakedsshitpost.repl.co/getm3u8/1729/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Punjab1_TV.png" group-title="Entertainment",Luv Punjab TV 
+http://moj.drakedsshitpost.repl.co/getm3u8/1730/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_5.png" group-title="Sports",Jio Football 5 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1813/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_6.png" group-title="Sports",Jio Football 6 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1814/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/DTV_Bharat.png" group-title="News",DTV Bharat 
+http://moj.drakedsshitpost.repl.co/getm3u8/1816/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/NEWS_24_MPCG.png" group-title="News",NEWS 24 MPCG 
+http://moj.drakedsshitpost.repl.co/getm3u8/1817/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_7.png" group-title="Sports",Jio Football 7 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1823/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_8.png" group-title="Sports",Jio Football 8 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1824/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_Hindi_HD.png" group-title="Sports",Jio Football Hindi HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1234/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_Malayalam_HD.png" group-title="Sports",Jio Football Malayalam HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1236/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Football_Bangali_HD.png" group-title="Sports",Jio Football Bengali HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1239/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/TEST10_HD.png" group-title="News",TEST10 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1240/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Infinity_SD.png" group-title="Entertainment",Colors Infinity SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1325/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Comedy_Central_SD.png" group-title="Entertainment",Comedy Central SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1327/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_TV.png" group-title="Entertainment",Zee TV 
+http://moj.drakedsshitpost.repl.co/getm3u8/1351/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Wah.png" group-title="Entertainment",Sony Wah 
+http://moj.drakedsshitpost.repl.co/getm3u8/1393/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_SD.png" group-title="Entertainment",Set SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1396/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/BBC_Hindi.png" group-title="News",BBC News Hindi 
+http://moj.drakedsshitpost.repl.co/getm3u8/1431/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/History_TV18_SD.png" group-title="Infotainment",History TV18 SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1471/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Color_Cineplex_HD.png" group-title="Movies",Colors Cineplex HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1477/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pix_SD.png" group-title="Movies",Sony Pix SD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1530/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/And_Pictures.png" group-title="Movies",And Pictures 
+http://moj.drakedsshitpost.repl.co/getm3u8/1839/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Punjab_Plus.png" group-title="Entertainment",Punjab Plus 
+http://moj.drakedsshitpost.repl.co/getm3u8/1868/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/7X_Music.png" group-title="Music",7X Music 
+http://moj.drakedsshitpost.repl.co/getm3u8/1871/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Sports_1_HD.png" group-title="Sports",Jio Sports 1 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1889/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Sports_2_HD.png" group-title="Sports",Jio Sports 2 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1890/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Sports_3_HD.png" group-title="Sports",Jio Sports 3 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1970/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Sports_4_HD.png" group-title="Sports",Jio Sports 4 HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/1971/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Jio_Prime_HD.png" group-title="Entertainment",Jio Prime HD 
+http://moj.drakedsshitpost.repl.co/getm3u8/2149/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/India24x7.png" group-title="News",India 24x7 
+http://moj.drakedsshitpost.repl.co/getm3u8/2176/master.m3u8
+#EXTINF:1 tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/India_News_Punjab.png" group-title="News",India News Punjab 
+http://moj.drakedsshitpost.repl.co/getm3u8/2224/master.m3u8
